@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/shards.min.css">
+</head>
+<body>
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <form action="#" th:action="@{/products/create}" th:object="${product}" method="post" class="was-validated">
+                <div class="row">
+                    <div class="col-md-6 mb-3 ml-auto mr-auto">
+                        <input type="text" th:field="*{name}" id="name" placeholder="Название" class="form-control">
+                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3 ml-auto mr-auto">
+                        <select th:field="*{type}" class="custom-select">
+                            <option th:value="'Appliances'" th:text="'Бытовая техника'"></option>
+                            <option th:value="'Computers'" th:text="'Компьютеры'"></option>
+                            <option th:value="'Smartphones'" th:text="'Смартфоны'"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3 ml-auto mr-auto">
+                        <textarea name="description" th:text="*{description}" class="form-control"></textarea>
+                        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3 ml-auto mr-auto">
+                        <input type="number" th:field="*{price}" id="price" placeholder="Цена" class="form-control">
+                        <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3 ml-auto mr-auto">
+                        <input type="submit" value="Добавить продукт" class="form-control">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
