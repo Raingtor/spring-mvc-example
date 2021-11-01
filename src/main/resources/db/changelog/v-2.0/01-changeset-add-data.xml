@@ -4,82 +4,113 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
-        <changeSet id="4" author="Raingtor">
-        <insert tableName="products">
-            <column name="id" value="0ed9f836-1db6-11eb-adc1-0242ac120002"/>
-            <column name="type" value="Appliances"/>
-            <column name="name" value="Пылесос Samsung SC4520 синий"/>
-            <column name="description" value="Пылесос Samsung SC4520 незаменим в процессе уборки, ведь с его помощью вы
-            сможете за считанные минуты очистить любое напольное покрытие от мусора и пыли. Данная модель предназначается
-            для сухой уборки и имеет мощность всасывания, равняющуюся 350 Вт, при потребляемой мощности 1600 Вт.
-            Прибор заключен в пластиковый корпус, выполненный в симпатичном синем цвете."/>
-            <column name="price" value="4300"/>
-        </insert>
-        <insert tableName="products">
-            <column name="id" value="134a364c-1db6-11eb-adc1-0242ac120002"/>
-            <column name="type" value="Appliances"/>
-            <column name="name" value="Стиральная машина LG F1296NDS1"/>
-            <column name="description" value="Стиральная машина LG F1296NDS1 станет практичным решением вопроса с чистотой
-             белья даже в небольшой ванной. Ее ширина и глубина составляют 60 и 44 см соответственно. При этом за один
-             раз прибор способен очистить до 6 кг белья за цикл. За счет большого количества встроенных программ
-             получится создать оптимальные условия для стирки вещей из любой ткани. "/>
-            <column name="price" value="24000"/>
-        </insert>
-        <insert tableName="products">
-            <column name="id" value="541b193a-b207-4af8-ae25-4eba9a060a36"/>
-            <column name="type" value="Appliances"/>
-            <column name="name" value="Утюг Philips GC4563/30 фиолетовый"/>
-            <column name="description" value="Утюг Philips GC4563/30 - надежный и производительный бытовой прибор,
-             представленный в изящной фиолетово-черной расцветке. С его помощью вам покорится гора неглаженного белья,
-             а время на утомительную процедуру глажки значительно сократится. Устройство не оставит ни единого шанса
-             даже самой маленькой и незаметной складочке на вашей одежде. Высокая мощность, достигающая 2500 Вт,
-             вместе с паровым ударом, имеющим скорость 230 г/мин, обеспечивают идеальное проглаживание ткани любой
-             фактуры."/>
-            <column name="price" value="7500"/>
-        </insert>
-        <insert tableName="products">
-            <column name="id" value="745b146a-3b6d-44d5-b096-d597a5bfd18c"/>
-            <column name="type" value="Computers"/>
-            <column name="name" value="15.6 Ноутбук Lenovo IdeaPad 3 15ARE05 серый"/>
-            <column name="description" value="Ноутбук Lenovo IdeaPad 3 15ARE05 обладает характеристиками стильного и
-            функционального помощника в решении повседневных компьютерных задач. Он выполнен в пластиковом корпусе
-            толщиной 19.9 мм и весом 1.7 кг. Аппаратная платформа с 4-ядерным процессором AMD Ryzen 3 4300U, работающим
-            совместно с 8 ГБ оперативной памяти, обеспечивает достаточно высокий уровень производительности и
-            быстродействия системы. Твердотельный накопитель объемом 512 Гб позволяет надежно хранить файлы."/>
-            <column name="price" value="41000"/>
-        </insert>
-        <insert tableName="products">
-            <column name="id" value="d4888de2-3f71-447f-97ff-eaf8fc958e5a"/>
-            <column name="type" value="Computers"/>
-            <column name="name" value="13.3 Ноутбук Apple MacBook Air серый"/>
-            <column name="description" value="Нужен портативный помощник в работе и развлечениях? Ноутбук Apple MacBook
-            Air вы сможете с собой взять даже в самолет! Он весит всего 1.29 кг, а его параметры составляют 21.2x30 см.
-            Диагональ экрана приравнивается к 13.3 или 34 см. Он изготовлен на основе технологии IPS и способен
-            воспроизводить картинку с разрешением до 2560x1600 пикселей. "/>
-            <column name="price" value="120000"/>
-        </insert>
-        <insert tableName="products">
-            <column name="id" value="57ec37fc-7f88-473e-8671-c97a6f41e0e1"/>
-            <column name="type" value="Smartphones"/>
-            <column name="name" value="6.53 Смартфон Xiaomi Redmi 9 64 ГБ серый"/>
-            <column name="description" value="6.53 Смартфон Xiaomi Redmi 9 64 ГБ выпускается в сером цвете в корпусе из
-            пластика. Экран диагональю 6.53 дюйма и разрешением 2340x1080 полностью лишен рамок, распознает около 16.7
-            млн. цветов. Оснащен специальным покрытием Corning Gorilla Glass 3, которое оберегает поверхность экрана от
-            царапин. Возможна одновременная установка 2 SIM-карт формата Nano-SIM. Также поддерживаются модули связи для
-            сетей 2G, 3G и 4G (LTE). Функционирует устройство на базе ОС Android 10. Продуктивность и высокая скорость
-            работы обеспечиваются мощным 8-ядерным процессором MediaTek Helio G80 с частотой 2 и 1.8 ГГц."/>
-            <column name="price" value="13500"/>
-        </insert>
-        <insert tableName="products">
-            <column name="id" value="b8349440-20a7-4c4b-a7d5-e1af0a4baeda"/>
-            <column name="type" value="Smartphones"/>
-            <column name="name" value="6.1 Смартфон Apple iPhone 11 128 ГБ черный"/>
-            <column name="description" value="Корпус смартфона Apple iPhone 11 с диагональю 6.1 выполнен из металла и
-            украшен стеклянной панелью. Черный цвет устройства притягивает, что наряду с зеркальным блеском стекла
-            создает весьма гармоничный дизайн. Защита по стандарту IP68 позволяет погружать устройство даже на глубину
-            до 2 м на время до 30 мин. В арсенале аппарата 128 ГБ, что снимает всяческие ограничения с пользователя
-            касательно съемки и сохранения различной цифровой информации."/>
-            <column name="price" value="60000"/>
-        </insert>
+        <changeSet id="8" author="Raingtor">
+            <insert tableName="customers">
+                <column name="id" value="003a4146-1db6-11eb-adc1-0242ac120002"/>
+                <column name="birthday" value="1999-03-04"/>
+                <column name="gender" value="female"/>
+                <column name="full_name" value="Maria Ivanova"/>
+                <column name="phone" value="89211111111"/>
+                <column name="email" value="mail2@mail.ru"/>
+                <column name="address" value="address2"/>
+            </insert>
+            <insert tableName="employees">
+                <column name="id" value="05d41dc0-1db6-11eb-adc1-0242ac120002"/>
+                <column name="full_name" value="Ivan Sidorov"/>
+                <column name="position" value="packer"/>
+            </insert>
+            <insert tableName="categories">
+                <column name="id" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="name" value="Электроника"/>
+                <column name="description" value="Описание"/>
+            </insert>
+            <insert tableName="products">
+                <column name="id" value="0ed9f836-1db6-11eb-adc1-0242ac120002"/>
+                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="name" value="Пылесос Samsung SC4520 синий"/>
+                <column name="description" value="Пылесос Samsung SC4520 незаменим в процессе уборки, ведь с его помощью вы
+                сможете за считанные минуты очистить любое напольное покрытие от мусора и пыли. Данная модель предназначается
+                для сухой уборки и имеет мощность всасывания, равняющуюся 350 Вт, при потребляемой мощности 1600 Вт.
+                Прибор заключен в пластиковый корпус, выполненный в симпатичном синем цвете."/>
+                <column name="price" value="4300"/>
+            </insert>
+            <insert tableName="products">
+                <column name="id" value="134a364c-1db6-11eb-adc1-0242ac120002"/>
+                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="name" value="Стиральная машина LG F1296NDS1"/>
+                <column name="description" value="Стиральная машина LG F1296NDS1 станет практичным решением вопроса с чистотой
+                 белья даже в небольшой ванной. Ее ширина и глубина составляют 60 и 44 см соответственно. При этом за один
+                 раз прибор способен очистить до 6 кг белья за цикл. За счет большого количества встроенных программ
+                 получится создать оптимальные условия для стирки вещей из любой ткани. "/>
+                <column name="price" value="24000"/>
+            </insert>
+            <insert tableName="products">
+                <column name="id" value="541b193a-b207-4af8-ae25-4eba9a060a36"/>
+                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="name" value="Утюг Philips GC4563/30 фиолетовый"/>
+                <column name="description" value="Утюг Philips GC4563/30 - надежный и производительный бытовой прибор,
+                 представленный в изящной фиолетово-черной расцветке. С его помощью вам покорится гора неглаженного белья,
+                 а время на утомительную процедуру глажки значительно сократится. Устройство не оставит ни единого шанса
+                 даже самой маленькой и незаметной складочке на вашей одежде. Высокая мощность, достигающая 2500 Вт,
+                 вместе с паровым ударом, имеющим скорость 230 г/мин, обеспечивают идеальное проглаживание ткани любой
+                 фактуры."/>
+                <column name="price" value="7500"/>
+            </insert>
+            <insert tableName="products">
+                <column name="id" value="745b146a-3b6d-44d5-b096-d597a5bfd18c"/>
+                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="name" value="15.6 Ноутбук Lenovo IdeaPad 3 15ARE05 серый"/>
+                <column name="description" value="Ноутбук Lenovo IdeaPad 3 15ARE05 обладает характеристиками стильного и
+                функционального помощника в решении повседневных компьютерных задач. Он выполнен в пластиковом корпусе
+                толщиной 19.9 мм и весом 1.7 кг. Аппаратная платформа с 4-ядерным процессором AMD Ryzen 3 4300U, работающим
+                совместно с 8 ГБ оперативной памяти, обеспечивает достаточно высокий уровень производительности и
+                быстродействия системы. Твердотельный накопитель объемом 512 Гб позволяет надежно хранить файлы."/>
+                <column name="price" value="41000"/>
+            </insert>
+            <insert tableName="products">
+                <column name="id" value="d4888de2-3f71-447f-97ff-eaf8fc958e5a"/>
+                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="name" value="13.3 Ноутбук Apple MacBook Air серый"/>
+                <column name="description" value="Нужен портативный помощник в работе и развлечениях? Ноутбук Apple MacBook
+                Air вы сможете с собой взять даже в самолет! Он весит всего 1.29 кг, а его параметры составляют 21.2x30 см.
+                Диагональ экрана приравнивается к 13.3 или 34 см. Он изготовлен на основе технологии IPS и способен
+                воспроизводить картинку с разрешением до 2560x1600 пикселей. "/>
+                <column name="price" value="120000"/>
+            </insert>
+            <insert tableName="products">
+                <column name="id" value="57ec37fc-7f88-473e-8671-c97a6f41e0e1"/>
+                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="name" value="6.53 Смартфон Xiaomi Redmi 9 64 ГБ серый"/>
+                <column name="description" value="6.53 Смартфон Xiaomi Redmi 9 64 ГБ выпускается в сером цвете в корпусе из
+                пластика. Экран диагональю 6.53 дюйма и разрешением 2340x1080 полностью лишен рамок, распознает около 16.7
+                млн. цветов. Оснащен специальным покрытием Corning Gorilla Glass 3, которое оберегает поверхность экрана от
+                царапин. Возможна одновременная установка 2 SIM-карт формата Nano-SIM. Также поддерживаются модули связи для
+                сетей 2G, 3G и 4G (LTE). Функционирует устройство на базе ОС Android 10. Продуктивность и высокая скорость
+                работы обеспечиваются мощным 8-ядерным процессором MediaTek Helio G80 с частотой 2 и 1.8 ГГц."/>
+                <column name="price" value="13500"/>
+            </insert>
+            <insert tableName="products">
+                <column name="id" value="b8349440-20a7-4c4b-a7d5-e1af0a4baeda"/>
+                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="name" value="6.1 Смартфон Apple iPhone 11 128 ГБ черный"/>
+                <column name="description" value="Корпус смартфона Apple iPhone 11 с диагональю 6.1 выполнен из металла и
+                украшен стеклянной панелью. Черный цвет устройства притягивает, что наряду с зеркальным блеском стекла
+                создает весьма гармоничный дизайн. Защита по стандарту IP68 позволяет погружать устройство даже на глубину
+                до 2 м на время до 30 мин. В арсенале аппарата 128 ГБ, что снимает всяческие ограничения с пользователя
+                касательно съемки и сохранения различной цифровой информации."/>
+                <column name="price" value="60000"/>
+            </insert>
+            <insert tableName="orders">
+                <column name="id" value="c0ecd124-1db6-11eb-adc1-0242ac120002"/>
+                <column name="create_date" value="2020-09-11"/>
+                <column name="finish_date" value="2020-09-29"/>
+                <column name="status" value="completed"/>
+                <column name="customer" value="003a4146-1db6-11eb-adc1-0242ac120002"/>
+                <column name="employee" value="05d41dc0-1db6-11eb-adc1-0242ac120002"/>
+            </insert>
+            <insert tableName="products_orders">
+                <column name="product" value="134a364c-1db6-11eb-adc1-0242ac120002"/>
+                <column name="order_id" value="c0ecd124-1db6-11eb-adc1-0242ac120002"/>
+            </insert>
     </changeSet>
 </databaseChangeLog>
