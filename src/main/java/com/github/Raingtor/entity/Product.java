@@ -25,12 +25,15 @@ public class Product {
     private @Id
     String id = UUID.randomUUID().toString();
 
+    @NonNull
     @NotBlank(message = "Укажите название")
     private String name;
 
+    @NonNull
     @NotBlank(message = "Укажите описание")
     private String description;
 
+    @NonNull
     @NotNull(message = "Укажите цену")
     private Float price;
 

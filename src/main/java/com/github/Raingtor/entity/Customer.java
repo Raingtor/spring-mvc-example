@@ -20,15 +20,18 @@ public class Customer{
     String id = UUID.randomUUID().toString();
 
     @NonNull
-    @Column(name = "full_Name")
-    private String fullName;
+    private String surName;
 
     @NonNull
+    private String name;
+
+    @Column(name = "second_name")
+    private String secondName;
+
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
 
-    @NonNull
     private String gender;
 
     @NonNull
@@ -39,8 +42,4 @@ public class Customer{
 
     @NonNull
     private String address;
-
-    @NonNull
-    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Order> orders;
 }

@@ -6,7 +6,6 @@ import lombok.NonNull;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -18,11 +17,9 @@ public class Category {
     private @Id
     String id = UUID.randomUUID().toString();
 
+    @NonNull
     private String name;
 
-    private String description;
-
     @NonNull
-    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Product> products;
+    private String description;
 }

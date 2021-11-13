@@ -7,22 +7,29 @@
         <changeSet id="8" author="Raingtor">
             <insert tableName="customers">
                 <column name="id" value="003a4146-1db6-11eb-adc1-0242ac120002"/>
+                <column name="surname" value="Иванова"/>
+                <column name="name" value="Мария"/>
+                <column name="second_name" value="Ивановна"/>
                 <column name="birthday" value="1999-03-04"/>
-                <column name="gender" value="female"/>
-                <column name="full_name" value="Maria Ivanova"/>
+                <column name="gender" value="женский"/>
                 <column name="phone" value="89211111111"/>
                 <column name="email" value="mail2@mail.ru"/>
-                <column name="address" value="address2"/>
+                <column name="address" value="г. Пенза, ул. Красная, д. 1, кв. 1"/>
             </insert>
             <insert tableName="employees">
                 <column name="id" value="05d41dc0-1db6-11eb-adc1-0242ac120002"/>
-                <column name="full_name" value="Ivan Sidorov"/>
-                <column name="position" value="packer"/>
+                <column name="surname" value="Иванов"/>
+                <column name="name" value="Иван"/>
+                <column name="second_name" value="Иванович"/>
+                <column name="birthday" value="1989-03-04"/>
+                <column name="gender" value="мужской"/>
+                <column name="position" value="сборщик"/>
             </insert>
             <insert tableName="categories">
                 <column name="id" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
                 <column name="name" value="Электроника"/>
-                <column name="description" value="Описание"/>
+                <column name="description" value="В каталоге Электроника можно ознакомиться с ценами, отзывами и
+                    описанием."/>
             </insert>
             <insert tableName="products">
                 <column name="id" value="0ed9f836-1db6-11eb-adc1-0242ac120002"/>
@@ -104,13 +111,15 @@
                 <column name="id" value="c0ecd124-1db6-11eb-adc1-0242ac120002"/>
                 <column name="create_date" value="2020-09-11"/>
                 <column name="finish_date" value="2020-09-29"/>
-                <column name="status" value="completed"/>
+                <column name="status" value="завершен"/>
                 <column name="customer" value="003a4146-1db6-11eb-adc1-0242ac120002"/>
                 <column name="employee" value="05d41dc0-1db6-11eb-adc1-0242ac120002"/>
             </insert>
             <insert tableName="products_orders">
+                <column name="id" value="c0ecd124-1db6-11eb-adc1-0242ac150102"/>
                 <column name="product" value="134a364c-1db6-11eb-adc1-0242ac120002"/>
-                <column name="order_id" value="c0ecd124-1db6-11eb-adc1-0242ac120002"/>
+                <column name="order" value="c0ecd124-1db6-11eb-adc1-0242ac120002"/>
+                <column name="amount" value="1"/>
             </insert>
     </changeSet>
 </databaseChangeLog>

@@ -24,14 +24,10 @@ public class Order {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createDate;
 
-    @NonNull
     @Column(name = "finish_date")
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date finishDate;
-
-    @NonNull
-    private String status;
 
     @NonNull
     @ManyToOne(fetch = FetchType.LAZY)
@@ -44,11 +40,5 @@ public class Order {
     private Employee employee;
 
     @NonNull
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "products_orders",
-            joinColumns = @JoinColumn(name = "order_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "product", referencedColumnName = "id")
-    )
-    private List<Product> products;
+    private String status;
 }
