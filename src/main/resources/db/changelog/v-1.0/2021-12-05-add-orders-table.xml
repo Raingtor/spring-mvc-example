@@ -5,25 +5,16 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="1" author="Raingtor">
-        <createTable tableName="products">
+    <changeSet id="add_orders_table" author="skv.studies">
+        <createTable tableName="orders">
             <column name="id" type="VARCHAR(36)">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="name" type="VARCHAR(80)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="description" type="VARCHAR(1000)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="price" type="float">
-                <constraints nullable="false"/>
-            </column>
-            <column name="category" type="VARCHAR(36)">
+            <column name="client" type="VARCHAR(36)">
                 <constraints
                         nullable="false"
-                        foreignKeyName="category"
-                        references="categories(id)"/>
+                        foreignKeyName="client"
+                        references="clients(id)"/>
             </column>
         </createTable>
     </changeSet>

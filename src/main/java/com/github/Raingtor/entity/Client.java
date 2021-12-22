@@ -5,7 +5,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -13,14 +12,14 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "customers")
-public class Customer{
+@Table(name = "clients")
+public class Client {
     @Column(name = "id")
     private @Id
     String id = UUID.randomUUID().toString();
 
     @NonNull
-    private String surName;
+    private String surname;
 
     @NonNull
     private String name;
@@ -34,12 +33,13 @@ public class Customer{
 
     private String gender;
 
-    @NonNull
     private String phone;
 
-    @NonNull
     private String email;
 
-    @NonNull
     private String address;
+
+    @NonNull
+    @Column(name = "is_manager")
+    private String isManager;
 }

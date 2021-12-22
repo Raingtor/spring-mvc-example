@@ -5,10 +5,12 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <include file="06-changeset-categories-table.xml" relativeToChangelogFile="true"/>
-    <include file="01-changeset-products-table.xml" relativeToChangelogFile="true"/>
-    <include file="02-changeset-customers-table.xml" relativeToChangelogFile="true"/>
-    <include file="03-changeset-employees-table.xml" relativeToChangelogFile="true"/>
-    <include file="04-changeset-orders-table.xml" relativeToChangelogFile="true"/>
-    <include file="05-changeset-products-orders-table.xml" relativeToChangelogFile="true"/>
+    <include file="2021-12-05-add-categories-table.xml" relativeToChangelogFile="true"/>
+    <include file="2021-12-05-add-clients-table.xml" relativeToChangelogFile="true"/>
+    <include file="2021-12-05-add-orders-table.xml" relativeToChangelogFile="true"/>
+    <include file="2021-12-05-add-products-table.xml" relativeToChangelogFile="true"/>
+    <include file="2021-12-05-add-products-orders-table.xml" relativeToChangelogFile="true"/>
+    <include file="2021-12-05-add-statuses-table.xml" relativeToChangelogFile="true"/>
+    <include file="2021-12-05-add-statuses-orders-table.xml" relativeToChangelogFile="true"/>
+    <include file="2021-12-15-add-import-products-from-csv-procedure.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

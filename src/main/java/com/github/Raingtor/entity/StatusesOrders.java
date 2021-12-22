@@ -12,29 +12,22 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "employees")
-public class Employee {
-    @Column(name = "id")
+@Table(name = "statuses_orders")
+public class StatusesOrders {
     private @Id
     String id = UUID.randomUUID().toString();
 
     @NonNull
-    private String surName;
-
-    @NonNull
-    private String name;
-
-    @Column(name = "second_name")
-    private String secondName;
-
-    @NonNull
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date birthday;
+    private Date date;
 
     @NonNull
-    private String gender;
+    @ManyToOne
+    @JoinColumn(name = "order_", referencedColumnName = "id")
+    private Order order;
 
     @NonNull
-    private String position;
+    @ManyToOne
+    @JoinColumn(name = "status", referencedColumnName = "id")
+    private Status status;
 }

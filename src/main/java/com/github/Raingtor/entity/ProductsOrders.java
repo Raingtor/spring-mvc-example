@@ -1,6 +1,9 @@
 package com.github.Raingtor.entity;
 
+import com.github.Raingtor.service.ProductService;
+import com.github.Raingtor.service.impl.ProductServiceImpl;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.util.UUID;
@@ -16,14 +19,15 @@ public class ProductsOrders {
     String id = UUID.randomUUID().toString();
 
     @NonNull
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order", referencedColumnName = "id")
+    private int amount;
+
+    @NonNull
+    @ManyToOne
+    @JoinColumn(name = "order_", referencedColumnName = "id")
     private Order order;
 
     @NonNull
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "product", referencedColumnName = "id")
     private Product product;
-
-    private int amount;
 }

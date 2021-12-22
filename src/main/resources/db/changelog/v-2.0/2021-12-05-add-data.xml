@@ -4,8 +4,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
-        <changeSet id="8" author="Raingtor">
-            <insert tableName="customers">
+        <changeSet id="add_data" author="Raingtor">
+            <insert tableName="clients">
                 <column name="id" value="003a4146-1db6-11eb-adc1-0242ac120002"/>
                 <column name="surname" value="Иванова"/>
                 <column name="name" value="Мария"/>
@@ -15,20 +15,26 @@
                 <column name="phone" value="89211111111"/>
                 <column name="email" value="mail2@mail.ru"/>
                 <column name="address" value="г. Пенза, ул. Красная, д. 1, кв. 1"/>
+                <column name="is_manager" value="0"/>
             </insert>
-            <insert tableName="employees">
+            <insert tableName="clients">
                 <column name="id" value="05d41dc0-1db6-11eb-adc1-0242ac120002"/>
                 <column name="surname" value="Иванов"/>
                 <column name="name" value="Иван"/>
                 <column name="second_name" value="Иванович"/>
-                <column name="birthday" value="1989-03-04"/>
-                <column name="gender" value="мужской"/>
-                <column name="position" value="сборщик"/>
+                <column name="is_manager" value="1"/>
             </insert>
             <insert tableName="categories">
                 <column name="id" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
                 <column name="name" value="Электроника"/>
                 <column name="description" value="В каталоге Электроника можно ознакомиться с ценами, отзывами и
+                    описанием."/>
+            </insert>
+            <insert tableName="categories">
+                <column name="id" value="0ed9f836-1db6-11eb-adc1-0242ac120021"/>
+                <column name="parent" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="name" value="Смартфоны"/>
+                <column name="description" value="В каталоге Смартфоны можно ознакомиться с ценами, отзывами и
                     описанием."/>
             </insert>
             <insert tableName="products">
@@ -40,6 +46,7 @@
                 для сухой уборки и имеет мощность всасывания, равняющуюся 350 Вт, при потребляемой мощности 1600 Вт.
                 Прибор заключен в пластиковый корпус, выполненный в симпатичном синем цвете."/>
                 <column name="price" value="4300"/>
+                <column name="amount" value="2"/>
             </insert>
             <insert tableName="products">
                 <column name="id" value="134a364c-1db6-11eb-adc1-0242ac120002"/>
@@ -50,6 +57,7 @@
                  раз прибор способен очистить до 6 кг белья за цикл. За счет большого количества встроенных программ
                  получится создать оптимальные условия для стирки вещей из любой ткани. "/>
                 <column name="price" value="24000"/>
+                <column name="amount" value="1"/>
             </insert>
             <insert tableName="products">
                 <column name="id" value="541b193a-b207-4af8-ae25-4eba9a060a36"/>
@@ -62,6 +70,7 @@
                  вместе с паровым ударом, имеющим скорость 230 г/мин, обеспечивают идеальное проглаживание ткани любой
                  фактуры."/>
                 <column name="price" value="7500"/>
+                <column name="amount" value="10"/>
             </insert>
             <insert tableName="products">
                 <column name="id" value="745b146a-3b6d-44d5-b096-d597a5bfd18c"/>
@@ -73,6 +82,7 @@
                 совместно с 8 ГБ оперативной памяти, обеспечивает достаточно высокий уровень производительности и
                 быстродействия системы. Твердотельный накопитель объемом 512 Гб позволяет надежно хранить файлы."/>
                 <column name="price" value="41000"/>
+                <column name="amount" value="5"/>
             </insert>
             <insert tableName="products">
                 <column name="id" value="d4888de2-3f71-447f-97ff-eaf8fc958e5a"/>
@@ -83,10 +93,11 @@
                 Диагональ экрана приравнивается к 13.3 или 34 см. Он изготовлен на основе технологии IPS и способен
                 воспроизводить картинку с разрешением до 2560x1600 пикселей. "/>
                 <column name="price" value="120000"/>
+                <column name="amount" value="1"/>
             </insert>
             <insert tableName="products">
                 <column name="id" value="57ec37fc-7f88-473e-8671-c97a6f41e0e1"/>
-                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120021"/>
                 <column name="name" value="6.53 Смартфон Xiaomi Redmi 9 64 ГБ серый"/>
                 <column name="description" value="6.53 Смартфон Xiaomi Redmi 9 64 ГБ выпускается в сером цвете в корпусе из
                 пластика. Экран диагональю 6.53 дюйма и разрешением 2340x1080 полностью лишен рамок, распознает около 16.7
@@ -95,10 +106,11 @@
                 сетей 2G, 3G и 4G (LTE). Функционирует устройство на базе ОС Android 10. Продуктивность и высокая скорость
                 работы обеспечиваются мощным 8-ядерным процессором MediaTek Helio G80 с частотой 2 и 1.8 ГГц."/>
                 <column name="price" value="13500"/>
+                <column name="amount" value="3"/>
             </insert>
             <insert tableName="products">
                 <column name="id" value="b8349440-20a7-4c4b-a7d5-e1af0a4baeda"/>
-                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120001"/>
+                <column name="category" value="0ed9f836-1db6-11eb-adc1-0242ac120021"/>
                 <column name="name" value="6.1 Смартфон Apple iPhone 11 128 ГБ черный"/>
                 <column name="description" value="Корпус смартфона Apple iPhone 11 с диагональю 6.1 выполнен из металла и
                 украшен стеклянной панелью. Черный цвет устройства притягивает, что наряду с зеркальным блеском стекла
@@ -106,20 +118,39 @@
                 до 2 м на время до 30 мин. В арсенале аппарата 128 ГБ, что снимает всяческие ограничения с пользователя
                 касательно съемки и сохранения различной цифровой информации."/>
                 <column name="price" value="60000"/>
+                <column name="amount" value="5"/>
+            </insert>
+            <insert tableName="statuses">
+                <column name="id" value="b8349440-20a7-4c4b-a7d5-e1af0a4baecd"/>
+                <column name="name" value="Оформлен"/>
+            </insert>
+            <insert tableName="statuses">
+                <column name="id" value="b8349440-20a7-4c4b-a7d5-e1af0a4baece"/>
+                <column name="name" value="Собран"/>
+            </insert>
+            <insert tableName="statuses">
+                <column name="id" value="b8349440-20a7-4c4b-a7d5-e1af0a4baecc"/>
+                <column name="name" value="В доставке"/>
+            </insert>
+            <insert tableName="statuses">
+                <column name="id" value="b8349440-20a7-4c4b-a7d5-e1af0a4baecf"/>
+                <column name="name" value="Доставлен"/>
             </insert>
             <insert tableName="orders">
                 <column name="id" value="c0ecd124-1db6-11eb-adc1-0242ac120002"/>
-                <column name="create_date" value="2020-09-11"/>
-                <column name="finish_date" value="2020-09-29"/>
-                <column name="status" value="завершен"/>
-                <column name="customer" value="003a4146-1db6-11eb-adc1-0242ac120002"/>
-                <column name="employee" value="05d41dc0-1db6-11eb-adc1-0242ac120002"/>
+                <column name="client" value="003a4146-1db6-11eb-adc1-0242ac120002"/>
             </insert>
             <insert tableName="products_orders">
                 <column name="id" value="c0ecd124-1db6-11eb-adc1-0242ac150102"/>
                 <column name="product" value="134a364c-1db6-11eb-adc1-0242ac120002"/>
-                <column name="order" value="c0ecd124-1db6-11eb-adc1-0242ac120002"/>
+                <column name="order_" value="c0ecd124-1db6-11eb-adc1-0242ac120002"/>
                 <column name="amount" value="1"/>
+            </insert>
+            <insert tableName="statuses_orders">
+                <column name="id" value="c0ecd124-1db6-11eb-adc1-0242ac150122"/>
+                <column name="date" value="2021-12-05"/>
+                <column name="status" value="b8349440-20a7-4c4b-a7d5-e1af0a4baecd"/>
+                <column name="order_" value="c0ecd124-1db6-11eb-adc1-0242ac120002"/>
             </insert>
     </changeSet>
 </databaseChangeLog>
